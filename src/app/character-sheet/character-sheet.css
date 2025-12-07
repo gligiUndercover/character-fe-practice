@@ -1,0 +1,31 @@
+.stats {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.stats p {
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #4a5568;
+  border-radius: 8px;
+  color: #f0e6d2;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.stats p:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #e6c79c;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(230, 199, 156, 0.3);
+}
+
+.stats strong {
+  color: #e6c79c;
+  margin-right: 8px;
+}

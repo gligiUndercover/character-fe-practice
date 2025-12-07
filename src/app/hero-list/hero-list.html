@@ -1,0 +1,14 @@
+<div class="hero-list-container">
+  <h2>Choose Your Hero</h2>
+  <ul class="hero-list">
+    @for (character of characters; track character.id) {
+      <li class="hero-card" (click)="onClick(character)">
+      <img [src]="character.avatar" alt="Hero Avatar" class="hero-avatar"/>
+      <div class="hero-info">
+        <h3 class="hero-name">{{character.name}}</h3>
+        <p class="hero-class">{{character.class}}</p>
+      </div>
+    </li>
+    }
+  </ul>
+</div>

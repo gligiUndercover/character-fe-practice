@@ -1,0 +1,16 @@
+<div class="hero-detail-container">
+  <div class="hero-header">
+    <h2 class="hero-title">{{hero.name}}</h2>
+    <p class="hero-subtitle">{{hero.class}}</p>
+  </div>
+  
+  <div class="action-buttons">
+    <button class="btn-primary">Show Inventory</button>
+    <button class="btn-primary" (click)="onCharacterSheetClicked()">Show Stats</button>
+  </div>
+  
+  <div class="content-area">
+    <app-character-sheet *ngIf="characterSheetClicked" [hero]="hero"></app-character-sheet>
+    <!-- Inventory or Stats will show here -->
+  </div>
+</div>
