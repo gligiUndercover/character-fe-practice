@@ -29,3 +29,26 @@
   color: #e6c79c;
   margin-right: 8px;
 }
+
+.tooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #e6c79c;
+  border-radius: 8px;
+  padding: 12px;
+  color: #f0e6d2;
+  z-index: 9999;
+  pointer-events: none; /* Prevents flicker */
+  min-width: 200px;
+}
+
+.tooltip h3 {
+  margin: 0 0 8px 0;
+  color: #e6c79c;
+  font-size: 16px;
+}
+
+.tooltip p {
+  margin: 4px 0;
+  font-size: 14px;
+}

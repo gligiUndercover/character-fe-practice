@@ -25,7 +25,7 @@ export class Inventory {
  }
 
  hideTooltip() {
-  console.log('hiding tooltip', this.tooltipVisible);
+  // console.log('hiding tooltip', this.tooltipVisible);
   this.tooltipVisible = false;
   this.tooltipItem = null;
  }

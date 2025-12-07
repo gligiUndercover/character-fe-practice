@@ -1,6 +1,23 @@
 <!-- stats.component.html -->
 <div class="stats">
-  <p><strong>Strength:</strong>{{hero.stats.strength}}</p>
-  <p><strong>Agility:</strong>{{hero.stats.agility}}</p>
-  <p><strong>Intelligence:</strong>{{hero.stats.intelligence}}</p>
+  <p (mouseenter)="showTooltip($event, 'strength')"
+     (mouseleave)="hideTooltip()">
+     <strong>Strength:</strong>{{hero.stats.strength}}
+  </p>
+  <p (mouseenter)="showTooltip($event, 'agility')"
+     (mouseleave)="hideTooltip()">
+     <strong>Agility:</strong>{{hero.stats.agility}}
+  </p>
+  <p (mouseenter)="showTooltip($event, 'intelligence')"
+     (mouseleave)="hideTooltip()">
+     <strong>Intelligence:</strong>{{hero.stats.intelligence}}
+  </p>
+
+  @if (tooltipVisible) {
+    <div class="tooltip"
+       [style.left.px]="tooltipX"
+       [style.top.px]="tooltipY">
+       <p>{{ tooltipText }}</p>
+     </div>
+  }
 </div>
