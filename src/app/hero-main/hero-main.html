@@ -5,12 +5,12 @@
   </div>
   
   <div class="action-buttons">
-    <button class="btn-primary">Show Inventory</button>
+    <button class="btn-primary" (click)="onCharacterInventoryClicked()">Show Inventory</button>
     <button class="btn-primary" (click)="onCharacterSheetClicked()">Show Stats</button>
   </div>
   
   <div class="content-area">
     <app-character-sheet *ngIf="characterSheetClicked" [hero]="hero"></app-character-sheet>
-    <!-- Inventory or Stats will show here -->
+    <app-inventory *ngIf="characterInventoryClicked" [inventory]="hero.inventory"></app-inventory>
   </div>
 </div>

@@ -19,14 +19,15 @@ export class HeroList {
     id: "1",
     name: "Arthas",
     class: "Paladin",
-    avatar: "arthas.png",
+    avatar: "assets/images/characters/arthas.png",
     stats: {
       strength: 18,
       agility: 12,
       intelligence: 14
     },
     inventory: [
-      { id: "1", name: "Frostmourne", type: "weapon", icon: "fmourne.png" }
+      { id: "1", name: "Frostmourne", type: "weapon", icon: "fmourne.png" },
+      { id: "2", name: "Healing potion", type: "consumable", icon: "hpot.png"}
     ]
   },
   {
@@ -40,7 +41,10 @@ export class HeroList {
       intelligence: 18
     },
     inventory: [
-      { id: "1", name: "Doomhammer", type: "weapon", icon: "doomhammer.png" }
+      { id: "1", name: "Doomhammer", type: "weapon", icon: "dh-w.jpg" },
+      { id: "2", name: "Healing potion", type: "consumable", icon: "hpot.png"},
+      { id: "3", name: "Healing potion", type: "consumable", icon: "hpot.png"},
+      { id: "4", name: "Mana potion", type: "consumable", icon: "manapot.png"}
     ]
   },
   {
@@ -54,7 +58,8 @@ export class HeroList {
       intelligence: 22
     },
     inventory: [
-      { id: "1", name: "Staff", type: "weapon", icon: "staff.png" }
+      { id: "1", name: "Staff", type: "weapon", icon: "jainastaff.png"},
+      { id: "2", name: "Mana potion", type: "consumable", icon: "manapot.png"}
     ]
   }
 ]

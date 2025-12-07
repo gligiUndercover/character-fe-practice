@@ -1,1 +1,27 @@
-<p>inventory works!</p>
+<div class="inventory-container">
+  <div class="inventory-header">
+      <h2>Inventory</h2>
+  </div>  
+
+  <div class="inventory-grid">
+    @for (slot of slots; track $index) {
+      <div class="inventory-slot" 
+       (mouseenter)="showTooltip($event, slot)"
+       (mouseleave)="hideTooltip()">
+        @if (slot) {
+            <img [src]="getItemIcon($index)" alt="{{ inventory[$index]?.name }}">
+        }   
+      </div>
+    }
+
+    @if (tooltipVisible) {
+     <div class="tooltip"
+       [style.left.px]="tooltipX"
+       [style.top.px]="tooltipY">
+       <h3>{{ tooltipItem?.name }}</h3>
+       <p>Type: {{ tooltipItem?.type }}</p>
+     </div>
+    }
+  </div>
+</div>
+
