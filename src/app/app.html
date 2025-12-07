@@ -1,2 +1,5 @@
 <app-hero-list (heroSelected)="onSelectHero($event)"></app-hero-list>
-<app-hero-main *ngIf="selectedHero" [hero]="selectedHero"/>
+@if (!closeDetails) {
+    <app-hero-main *ngIf="selectedHero" [hero]="selectedHero" (detailsClosed)="onCloseDetails()"/>
+}
+

@@ -13,9 +13,15 @@ import { NgIf } from '@angular/common';
 export class App {
   protected readonly title = signal('hero');
   selectedHero?: any;
+  closeDetails = false;
 
   onSelectHero(hero: any) {
     this.selectedHero = hero;
-    console.log("Emitted and received info for hero with id" + hero.id);
+    this.closeDetails = false;
+    // console.log("Emitted and received info for hero with id" + hero.id);
+  }
+
+  onCloseDetails() {
+    this.closeDetails = true;
   }
 }

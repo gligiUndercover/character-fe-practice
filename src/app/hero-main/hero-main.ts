@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { CharacterSheet } from '../character-sheet/character-sheet';
 import { NgIf } from '@angular/common';
 import { Inventory } from "../inventory/inventory";
@@ -11,8 +11,14 @@ import { Inventory } from "../inventory/inventory";
 })
 export class HeroMain implements OnChanges {
   @Input() hero!: any;
+  @Output() detailsClosed = new EventEmitter(); 
+
   characterSheetClicked: boolean = false;
   characterInventoryClicked: boolean = false;
+
+  onClose() {
+    this.detailsClosed.emit();
+  }
 
   onCharacterSheetClicked() {
     this.characterSheetClicked = true;
