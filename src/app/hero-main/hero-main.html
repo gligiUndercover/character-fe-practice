@@ -9,6 +9,14 @@
   <div class="action-buttons">
     <button class="btn-primary" (click)="onCharacterInventoryClicked()">Show Inventory</button>
     <button class="btn-primary" (click)="onCharacterSheetClicked()">Show Stats</button>
+    <button class="btn-primary" (click)="onLevelUpClicked()">Level up</button>
+  </div>
+
+  <div> 
+    @if (levelUpClicked) {
+      <app-level-up (closedLevelUp)="onCloseLevelUp()"> </app-level-up>
+    }
+    
   </div>
   
   <div class="content-area">

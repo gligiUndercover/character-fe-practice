@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { type Hero } from '../models/hero.model';
 
 @Component({
   selector: 'app-hero-list',
@@ -9,7 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class HeroList {
 
   @Output() heroSelected = new EventEmitter();
-  onClick(hero: any) {
+  onClick(hero: Hero) {
     this.heroSelected.emit(hero);
     console.log("Emitting this badboy with id" + hero.id);
   }

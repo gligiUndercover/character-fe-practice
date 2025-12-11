@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { type Item } from '../models/hero.model';
 
 @Component({
   selector: 'app-inventory',
@@ -15,7 +16,7 @@ export class Inventory {
  tooltipX = 0;
  tooltipY = 0;
 
- showTooltip(event: MouseEvent, item: any) {
+ showTooltip(event: MouseEvent, item: Item) {
   if (!item) return;
 
   this.tooltipVisible = true;

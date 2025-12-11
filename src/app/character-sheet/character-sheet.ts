@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Hero } from '../models/hero.model';
 
 @Component({
   selector: 'app-character-sheet',
@@ -8,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CharacterSheet 
 {
-  @Input() hero!: any;
+  @Input() hero!: Hero;
   tooltipText: string = '';
 
   tooltipVisible = false;

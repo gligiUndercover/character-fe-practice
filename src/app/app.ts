@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeroList } from './hero-list/hero-list';
 import { HeroMain } from './hero-main/hero-main';
 import { NgIf } from '@angular/common';
+import { Hero } from './models/hero.model';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class App {
   selectedHero?: any;
   closeDetails = false;
 
-  onSelectHero(hero: any) {
+  onSelectHero(hero: Hero) {
     this.selectedHero = hero;
     this.closeDetails = false;
     // console.log("Emitted and received info for hero with id" + hero.id);
