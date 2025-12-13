@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core
 import { CharacterSheet } from '../character-sheet/character-sheet';
 import { NgIf } from '@angular/common';
 import { Inventory } from "../inventory/inventory";
-import { type Hero } from '../models/hero.model';
+import { Stats, type Hero } from '../models/hero.model';
 import { LevelUp } from "./level-up/level-up";
 
 @Component({
@@ -42,13 +42,17 @@ export class HeroMain implements OnChanges {
   }   
 
   onCloseLevelUp() {
-        this.levelUpClicked = false;
+    this.levelUpClicked = false;
+  }
+
+  onAddStats(event: {characterId: string, stats: Stats}) {
+    //get the array
   }
 
   ngOnChanges() {
   this.characterSheetClicked = false;
   this.characterInventoryClicked = false;
   this.levelUpClicked = false;
-}
+  }
 
 }

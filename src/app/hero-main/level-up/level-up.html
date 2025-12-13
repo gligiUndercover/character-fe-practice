@@ -1,24 +1,21 @@
 <div class="backdrop" (click)="onCloseLevelUp()"></div>
 <dialog open>
   <h2>Level up!</h2>
-  <form >
-    <!-- (ngSubmit)="onSubmit()" //THIS IS INSIDE <form>-->
+  <form (ngSubmit)="onSubmit()">
     <p>
       <label for="title">Strength</label>
-      <input type="text" id="title" name="title" />
-      <!-- [(ngModel)]="enteredTitle" //THIS IS INSIDE INPUT-->
+      <input type="number" id="strength" name="strength" [(ngModel)]="enteredStrength"/>
+      <!-- [(ngModel)]="var" //THIS IS INSIDE INPUT-->
     </p>
 
     <p>
       <label for="title">Agility</label>
-      <input type="text" id="title" name="title" />
-      <!-- [(ngModel)]="enteredTitle" //THIS IS INSIDE INPUT-->
+      <input type="number" id="agility" name="agility" [(ngModel)]="enteredAgility"/>
     </p>
 
     <p>
       <label for="title">Intelligence</label>
-      <input type="text" id="title" name="title" />
-      <!-- [(ngModel)]="enteredTitle" //THIS IS INSIDE INPUT-->
+      <input type="number" id="intelligence" name="intelligence" [(ngModel)]="enteredIntelligence"/>
     </p>
 
     <p class="actions">

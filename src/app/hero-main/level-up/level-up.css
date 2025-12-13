@@ -50,7 +50,7 @@ dialog label {
   font-weight: 600;
 }
 
-dialog input[type="text"] {
+dialog input[type="number"] {
   width: 100%;
   padding: 12px;
   background: rgba(255, 255, 255, 0.05);
@@ -62,14 +62,14 @@ dialog input[type="text"] {
   box-sizing: border-box;
 }
 
-dialog input[type="text"]:focus {
+dialog input[type="number"]:focus {
   outline: none;
   background: rgba(255, 255, 255, 0.1);
   border-color: #e6c79c;
   box-shadow: 0 2px 8px rgba(230, 199, 156, 0.3);
 }
 
-dialog input[type="text"]:hover {
+dialog input[type="number"]:hover {
   border-color: #e6c79c;
 }
 

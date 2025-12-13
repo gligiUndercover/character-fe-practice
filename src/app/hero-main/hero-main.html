@@ -14,7 +14,8 @@
 
   <div> 
     @if (levelUpClicked) {
-      <app-level-up (closedLevelUp)="onCloseLevelUp()"> </app-level-up>
+      <app-level-up [hero]="hero" (closedLevelUp)="onCloseLevelUp()" > </app-level-up>
+      <!-- (addStats)="onAddStats($event)" -->
     }
     
   </div>

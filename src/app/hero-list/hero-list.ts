@@ -15,7 +15,7 @@ export class HeroList {
     console.log("Emitting this badboy with id" + hero.id);
   }
 
-  characters = [
+  characters: Hero[] = [
   {
     id: "1",
     name: "Arthas",
